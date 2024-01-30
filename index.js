@@ -3,8 +3,8 @@ const app = express();
 
 app.get('/', (req, res) => {
     const event = req.query.event;
-    console.log(event);
-    res.send('Logged event');
+    if (event) console.log(event);
+    res.send();
 });
 
 app.listen(3030, () => {
